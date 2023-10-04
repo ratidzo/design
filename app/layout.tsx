@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import {Nunito_Sans} from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
+import Nav from './components/Nav'
 
 const inter = Nunito_Sans({ subsets: ['latin'] })
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Nav />
+        {children}
+      </body>
     </html>
   )
 }
