@@ -4,28 +4,31 @@ import menu from "../../public/menu.svg"
 import close from "../../public/close.svg"
 import Link from "next/link"
 import Button from "./Button"
-
-const Links = [
-    {
-        name: "HOME", link: '/'
-    },
-    {
-        name: "PRODUCT", link: '/'
-    },
-    {
-        name: "COMPANY", link: '/'
-    },
-    {
-        name: "BLOG", link: '/'
-    },
-    {
-        name: "CONTACT", link: '/'
-    }
-]
-
+import { useState } from "react"
 
 
 export default function Nav() {
+
+    const Links = [
+        {
+            name: "HOME", link: '/'
+        },
+        {
+            name: "PRODUCT", link: '/'
+        },
+        {
+            name: "COMPANY", link: '/'
+        },
+        {
+            name: "BLOG", link: '/'
+        },
+        {
+            name: "CONTACT", link: '/'
+        }
+    ]
+
+    const [open, setOpen] = useState(false);
+
     return(
         <div className="shadow-md w-full fixed top-0 left-0">
             <div className="md:flex items-center
@@ -41,7 +44,7 @@ export default function Nav() {
                 <div className="text-3xl absolute 
                     right-8 top-6 cursor-pointer md:hidden">
                     <Image alt="menu"
-                     src={menu} width={32} height={32} />
+                     src={open ? close : menu} width={32} height={32} />
                 </div>
                 <ul className="md:flex md:items-center md:pb-0 pb-12 
                     absolute md:static bg-white md:z-auto z-[-1]
