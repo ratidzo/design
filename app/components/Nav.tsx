@@ -52,7 +52,7 @@ export default function Nav() {
                     absolute md:static bg-white md:z-auto z-[-1]
                     left-0 w-full md:w-auto md:pl-0 pl-9
                     transition-all duration-500 ease-in
-                    ${open ? 'top-20': 'top-[-490px]'} `} >
+                    ${open ? 'top-16': 'top-[-490px]'} `} >
                     {
                         Links.map((link) => (
                             <li key={link.name}
@@ -65,6 +65,7 @@ export default function Nav() {
                             </li>
                         ) )
                     }
+                    <hr className="my-6 mr-8"></hr>
                     <Button>
                         Get Started
                     </Button>
