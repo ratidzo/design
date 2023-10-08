@@ -1,5 +1,7 @@
 import Image from "next/image"
 import logo from "../../public/logo-ionic.svg"
+import menu from "../../public/menu.svg"
+import close from "../../public/close.svg"
 import Link from "next/link"
 import Button from "./Button"
 
@@ -35,6 +37,11 @@ export default function Nav() {
                     text-gray-800 ">
                         Design
                     </h1>
+                </div>
+                <div className="text-3xl absolute 
+                    right-8 top-6 cursor-pointer md:hidden">
+                    <Image alt="menu"
+                     src={menu} width={32} height={32} />
                 </div>
                 <ul className="md:flex md:items-center md:pb-0 pb-12 
                     absolute md:static bg-white md:z-auto z-[-1]
