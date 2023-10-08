@@ -49,8 +49,9 @@ export default function Nav() {
                             </li>
                         ) )
                     }
-
-                    <Button></Button>
+                    <Button>
+                        Get Started
+                    </Button>
                 </ul>
 
 
