@@ -48,10 +48,11 @@ export default function Nav() {
                     <Image alt="menu"
                      src={open ? close : menu} width={32} height={32} />
                 </div>
-                <ul className="md:flex md:items-center md:pb-0 pb-12 
+                <ul className={`md:flex md:items-center md:pb-0 pb-12 
                     absolute md:static bg-white md:z-auto z-[-1]
                     left-0 w-full md:w-auto md:pl-0 pl-9
-                    transition-all duration-500 ease-in" >
+                    transition-all duration-500 ease-in
+                    ${open ? 'top-20': 'top-[-490px]'} `} >
                     {
                         Links.map((link) => (
                             <li key={link.name}
