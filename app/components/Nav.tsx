@@ -36,7 +36,8 @@ export default function Nav() {
                         Design
                     </h1>
                 </div>
-                <ul className="md:flex md:items-center md:pb-0 pb-12" >
+                <ul className="md:flex md:items-center md:pb-0 pb-12 
+                    absolute md:static bg-white" >
                     {
                         Links.map((link) => (
                             <li key={link.name}
