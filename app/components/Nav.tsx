@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import logo from "../../public/logo-ionic.svg"
 import menu from "../../public/menu.svg"
@@ -41,7 +43,7 @@ export default function Nav() {
                         Design
                     </h1>
                 </div>
-                <div className="text-3xl absolute 
+                <div onClick={() => setOpen(!open) } className="text-3xl absolute 
                     right-8 top-6 cursor-pointer md:hidden">
                     <Image alt="menu"
                      src={open ? close : menu} width={32} height={32} />
