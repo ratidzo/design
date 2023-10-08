@@ -1,14 +1,32 @@
 import Image from "next/image"
 import logo from "../../public/logo-ionic.svg"
+import Link from "next/link"
 
-
+const Links = [
+    {
+        name: "HOME", link: '/'
+    },
+    {
+        name: "PRODUCT", link: '/'
+    },
+    {
+        name: "COMPANY", link: '/'
+    },
+    {
+        name: "BLOG", link: '/'
+    },
+    {
+        name: "CONTACT", link: '/'
+    }
+]
 
 
 
 export default function Nav() {
     return(
         <div className="shadow-md w-full fixed top-0 left-0">
-            <div className="md:flex bg-white py-4">
+            <div className="md:flex items-center
+            justify-between bg-white py-4">
                 <div className="flex items-center pt-2 pl-4">
                     <Image alt="ionic logo"
                      src={logo} width={32} height={32} />
@@ -17,6 +35,20 @@ export default function Nav() {
                         Design
                     </h1>
                 </div>
+                <ul className="md:flex md:items-center" >
+                    {
+                        Links.map((link) => (
+                            <li>
+                                <Link href={link.link}>
+                                    {link.name}
+                                </Link>   
+                            </li>
+                        ) )
+                    }
+                </ul>
+
+
+
             </div>
         </div>
     )
