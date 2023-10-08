@@ -27,8 +27,8 @@ export default function Nav() {
     return(
         <div className="shadow-md w-full fixed top-0 left-0">
             <div className="md:flex items-center
-            justify-between bg-white py-4">
-                <div className="flex items-center pt-2 pl-4">
+            justify-between bg-white py-4 px-4">
+                <div className="flex items-center pt-2">
                     <Image alt="ionic logo"
                      src={logo} width={32} height={32} />
                     <h1 className="font-bold text-2xl cursor-pointer
@@ -52,6 +52,7 @@ export default function Nav() {
                     <Button>
                         Get Started
                     </Button>
+                    
                 </ul>
 
 
