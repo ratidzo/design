@@ -38,8 +38,11 @@ export default function Nav() {
                 <ul className="md:flex md:items-center" >
                     {
                         Links.map((link) => (
-                            <li>
-                                <Link href={link.link}>
+                            <li key={link.name}
+                            className="md:ml-8 text-lg" >
+                                <Link href={link.link}
+                                className="text-gray-800 hover:text-gray-400
+                            duration-500 " >
                                     {link.name}
                                 </Link>   
                             </li>
