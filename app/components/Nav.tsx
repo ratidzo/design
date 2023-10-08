@@ -1,6 +1,7 @@
 import Image from "next/image"
 import logo from "../../public/logo-ionic.svg"
 import Link from "next/link"
+import Button from "./Button"
 
 const Links = [
     {
@@ -48,6 +49,8 @@ export default function Nav() {
                             </li>
                         ) )
                     }
+
+                    <Button></Button>
                 </ul>
 
 
