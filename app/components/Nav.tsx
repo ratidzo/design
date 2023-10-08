@@ -37,7 +37,8 @@ export default function Nav() {
                     </h1>
                 </div>
                 <ul className="md:flex md:items-center md:pb-0 pb-12 
-                    absolute md:static bg-white" >
+                    absolute md:static bg-white md:z-auto z-[-1]
+                    left-0 w-full md:w-auto" >
                     {
                         Links.map((link) => (
                             <li key={link.name}
